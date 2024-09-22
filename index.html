@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <!-- Link sa Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External stylesheet first -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset ug Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            background-image:
+                repeating-linear-gradient(to right, transparent 0 100px,
+                    #25283b22 100px 101px),
+                repeating-linear-gradient(to bottom, transparent 0 100px,
+                    #25283b22 100px 101px);
+            position: relative;
+            /* Para ma-position ang ::before */
+        }
+
+        body::before {
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(images/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .author h2 {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: purple;
+            margin-bottom: 10px;
+        }
+
+        .author .header-icon {
+            margin-right: 10px;
+            font-size: 0.7em;
+            color: purple;
+            position: relative;
+            z-index: 10;
+        }
+
+        .author p {
+            color: plum;
+            margin-bottom: 5px;
+        }
+
+
+        .content {
+            padding: 20px;
+            color: white;
+        }
+
+        .banner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider .item img,
+        .slider .item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .play-now-link {
+            color: plum;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+        }
+
+        .play-now-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <div class="slider" style="--quantity: 10">
+            <!-- Mga Items 1 hangtod 10 -->
+            <div class="item" style="--position: 1">
+                <img src="images/games.jpg" alt="A screenshot from the games section">
+            </div>
+            <div class="item" style="--position: 2">
+                <img src="images/victory.png" alt="Victory banner">
+            </div>
+            <div class="item" style="--position: 3">
+                <video controls autoplay loop muted>
+                    <source src="images/en.mp4" type="video/mp4">
+                    <source src="images/en.mp4" type="video/webm">
+                    <source src="images/en.mp4" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item" style="--position: 4">
+                <img src="images/runningman.jpeg" alt="Running Man character">
+            </div>
+            <div class="item" style="--position: 5">
+                <img src="images/bts.jpg" alt="BTS group photo">
+            </div>
+            <div class="item" style="--position: 6">
+                <img src="images/freya.jpg" alt="Freya character">
+            </div>
+            <div class="item" style="--position: 8">
+                <video controls autoplay loop muted>
+                    <source src="images/gaming.mp4" type="video/mp4">
+                    <source src="images/gaming.mp4" type="video/webm">
+                    <source src="images/gaming.mp4" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item" style="--position: 7">
+                <img src="images/pg.jpg" alt="PG image">
+            </div>
+            <div class="item" style="--position: 9">
+                <img src="images/granny.jpg" alt="Granny character">
+            </div>
+            <div class="item" style="--position: 10">
+                <img src="images/ml.jpg" alt="ML image">
+            </div>
+        </div>
+        <div class="content">
+            <h1 data-content="GAMING">
+                GAMING
+            </h1>
+            <div class="author">
+                <h2>
+                    D.DANA
+                    <a href="https://youtu.be/39D5TqACTn0/"><i class="fa-solid fa-link header-icon"></i></a>
+                </h2>
+                <p><strong>Entertainment and Gaming</strong></p>
+                <p>
+                    Entertainment and gaming include movies, music, and video games, providing fun and interactive
+                    experiences for everyone.
+                </p>
+                <a href="https://www.mobilelegends.com/" class="play-now-link" target="_blank">Play Now!</a>
+            </div>
+            <div class="model"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
